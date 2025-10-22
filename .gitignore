@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Database / data
+*.sqlite3
+*.db
+data/
+
+# pytest
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
