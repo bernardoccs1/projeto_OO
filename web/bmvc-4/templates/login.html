@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Carlisle Automóveis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Carlisle Automóveis</h1>
+            <h2>Login</h2>
+            
+            {% if erro %}
+            <div class="alerta alerta-erro">{{ erro }}</div>
+            {% endif %}
+            
+            <form method="POST">
+                <div class="grupo">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="grupo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            
+            <div class="info-login">
+                <p><strong>Credenciais de teste:</strong></p>
+                <p>Usuário: <code>admin</code> | Senha: <code>admin123</code></p>
+                <p>Usuário: <code>vendedor</code> | Senha: <code>vend123</code></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

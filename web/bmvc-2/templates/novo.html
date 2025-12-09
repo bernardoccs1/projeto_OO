@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %}Novo Carro - Carlisle Automóveis{% endblock %}
+
+{% block conteudo %}
+<section class="formulario">
+    <h2>Adicionar Novo Carro</h2>
+    
+    <form method="POST" action="{{ url_for('criar') }}">
+        <div class="grupo">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" required>
+        </div>
+        
+        <div class="grupo">
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" required>
+        </div>
+        
+        <div class="grupo">
+            <label for="preco">Preço</label>
+            <input type="number" id="preco" name="preco" step="0.01" required>
+        </div>
+        
+        <div class="grupo">
+            <label for="ano">Ano</label>
+            <input type="number" id="ano" name="ano" min="1900" max="2100" required>
+        </div>
+        
+        <div class="botoes">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secundario">Cancelar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}
